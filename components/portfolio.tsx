@@ -17,9 +17,9 @@ const CaseOverlay = dynamic(() => import("@/components/case-overlay").then((mod)
 });
 
 const featuredMetrics = [
-  { value: 4, prefix: "+", suffix: "", label: "Documented case studies" },
-  { value: 2, prefix: "+", suffix: "", label: "Markets: Egypt & Saudi Arabia" },
-  { value: 3, prefix: "+", suffix: "", label: "Paid media platforms: Meta, TikTok & Snapchat" },
+  { value: 4, prefix: "+", suffix: "", label: "Years of Experience" },
+  { value: 20, prefix: "+", suffix: "", label: "Brands & Projects" },
+  { value: 250, prefix: "+", suffix: "K USD", label: "Managed Ad Spend" },
 ];
 
 const expertise = [
@@ -132,12 +132,12 @@ export default function Portfolio() {
         <div className="hero-copy">
           <Reveal>
             <div className="availability">
-              <span aria-hidden="true" /> Performance Marketing Strategist
+              <span aria-hidden="true" /> Performance Marketing Specialist
             </div>
             <h1>
-              Creative-led systems for <em>measurable</em> <span className="nowrap">e-commerce</span> growth.
+              <em>Performance marketing</em> built on research, data, and business thinking.
             </h1>
-            <p>Documented performance marketing work across e-commerce campaigns in Egypt and Saudi Arabia.</p>
+            <p>I help businesses make smarter marketing decisions through research, performance strategy, and measurable execution. My experience spans Egypt, Saudi Arabia, the UAE, and Jordan across multiple industries and growth stages.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
                 Explore case studies <ArrowDownRight size={18} aria-hidden="true" />
@@ -185,34 +185,34 @@ export default function Portfolio() {
       </section>
       <div id="content">
         <section className="section about">
-          <SectionHeading index="01" eyebrow="About" title="Performance marketing made to scale with clarity." />
+          <SectionHeading index="01" eyebrow="About" title="A business-first approach to performance marketing." />
           <Reveal className="about-lede">
             <p>
-              As a Performance Marketing Strategist, I work on full-funnel e-commerce growth across Egypt and Saudi Arabia. The documented portfolio spans premium e-commerce, fashion, and direct-to-consumer campaigns.
+              Great marketing decisions are rarely made inside an ad account. They begin with understanding the business, researching the market, and identifying opportunities. Advertising becomes the execution layer—not the starting point. That's the approach I bring to every project.
             </p>
           </Reveal>
           <div className="about-grid">
             <Reveal>
               <div className="about-card">
-                <span className="eyebrow">Specialization</span>
+                <span className="eyebrow">Business & Market Research</span>
                 <p>
-                  Creative-led scaling, broad prospecting, Advantage+ Shopping Campaigns, catalog sales, dynamic retargeting, and post-click conversion optimization.
+                  Understand the business model, customer behavior, competitors, and market opportunities before making marketing decisions.
                 </p>
               </div>
             </Reveal>
             <Reveal>
               <div className="about-card">
-                <span className="eyebrow">Approach</span>
+                <span className="eyebrow">Strategy & Creative Direction</span>
                 <p>
-                  Creative volume and systematic testing: identify winning hooks, scale them vertically and horizontally, then make the conversion path and basket value work harder.
+                  Translate research into acquisition strategies, messaging, creative direction, and channel planning designed around business objectives.
                 </p>
               </div>
             </Reveal>
             <Reveal>
               <div className="about-card">
-                <span className="eyebrow">Business value</span>
+                <span className="eyebrow">Performance Optimization</span>
                 <p>
-                  A practical focus on efficient growth—using data-backed creative strategy, real-time budget reallocation, and full-funnel structures built for profitable scale.
+                  Measure what matters, analyze performance data, identify growth opportunities, and continuously optimize campaigns for sustainable results.
                 </p>
               </div>
             </Reveal>
@@ -222,8 +222,8 @@ export default function Portfolio() {
           <SectionHeading
             index="02"
             eyebrow="Professional snapshot"
-            title="Experience represented in the documented work."
-            copy="These counters reflect only information that can be verified from the supplied portfolio."
+            title="Experience at a glance."
+            copy="A quick overview of the experience, markets, and measurable work represented throughout this portfolio."
           />
           <div className="metrics-grid profile-metrics">
             {featuredMetrics.map((metric) => (
