@@ -11,6 +11,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { caseStudies, logos, type CaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
+import { FloatingCTA } from "@/components/floating-cta";
 
 const CaseOverlay = dynamic(() => import("@/components/case-overlay").then((mod) => mod.CaseOverlay), {
   ssr: false,
@@ -164,24 +165,21 @@ export default function Portfolio() {
           <span className="eyebrow">Social proof</span>
           <p>Trusted by leading brands</p>
         </div>
-        <div className="marquee marquee-row-one" aria-hidden="true">
-          <div className="marquee-track marquee-track-right">
-            {[...logos, ...logos].map((logo, index) => (
-              <div className="logo-cell" key={`top-${index}`}>
-                <Image src={logo} alt="" fill sizes="264px" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="marquee marquee-row-two" aria-hidden="true">
-          <div className="marquee-track marquee-track-left">
-            {[...logos.slice().reverse(), ...logos.slice().reverse()].map((logo, index) => (
-              <div className="logo-cell" key={`bottom-${index}`}>
-                <Image src={logo} alt="" fill sizes="264px" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="marquee" aria-hidden="true">
+  <div className="marquee-track">
+    {[...logos, ...logos].map((logo, index) => (
+      <div className="logo-cell" key={index}>
+        <Image
+          src={logo}
+          alt=""
+          fill
+          sizes="180px"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+</div>
       </section>
       <div id="content">
         <section className="section about">
@@ -287,8 +285,8 @@ export default function Portfolio() {
         <section id="contact" className="section contact">
           <Reveal>
             <span className="eyebrow">Contact</span>
-            <h2>Let’s talk about what growth could look like.</h2>
-            <p>Start a conversation directly on WhatsApp.</p>
+            <h2>Let's build a smarter growth strategy.</h2>
+            <p>Whether you're scaling an existing business or planning your next growth stage, let's discuss the strategy behind profitable marketing.</p>
             <a
               className="button button-whatsapp"
               href={siteConfig.whatsapp}
@@ -296,7 +294,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               aria-label="Message on WhatsApp (opens in a new tab)"
             >
-              <WhatsAppIcon /> Message on WhatsApp <ArrowUpRight size={17} aria-hidden="true" />
+              <WhatsAppIcon /> Start a Conversation <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </Reveal>
         </section>
@@ -310,6 +308,7 @@ export default function Portfolio() {
         </div>
       </footer>
       <AnimatePresence>{selected && <CaseOverlay study={selected} close={closeCaseStudy} />}</AnimatePresence>
+      <FloatingCTA />
     </main>
   );
 }
