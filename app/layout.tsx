@@ -38,10 +38,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/profile/portrait.jpeg",
-        width: 893,
-        height: 1600,
-        alt: "Ahmad Portfolio",
+         url: "/og-image.jpg",
+    width: 999,
+    height: 526,
+    alt: "Ahmad | Performance Marketing Strategist & Media Buyer",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       "Portfolio showcasing performance marketing strategy, media buying, business-first thinking, and real case studies.",
 
-    images: ["/images/profile/portrait.jpeg"],
+    images: ["/og-image.jpg"],
   },
 };
 
